@@ -145,5 +145,5 @@ gltf.images.append(image)
 gltf.convert_images(pygltflib.ImageFormat.DATAURI)
 
 # save to file
-gltf.save("triangle.gltf")
-gltf.save("triangle.glb")
+gltf.save("test7.gltf")
+gltf.save("test7.glb")
