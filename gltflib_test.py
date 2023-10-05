@@ -22,12 +22,12 @@ model = GLTFModel(
     scenes=[Scene(nodes=[0])],
     nodes=[Node(mesh=0)],
     meshes=[Mesh(primitives=[Primitive(attributes=Attributes(POSITION=0))])],
-    buffers=[Buffer(byteLength=bytelen, uri='vertices.bin')],
+    buffers=[Buffer(byteLength=bytelen, uri='test_vertices.bin')],
     bufferViews=[BufferView(buffer=0, byteOffset=0, byteLength=bytelen, target=BufferTarget.ARRAY_BUFFER.value)],
     accessors=[Accessor(bufferView=0, byteOffset=0, componentType=ComponentType.FLOAT.value, count=len(vertices),
                         type=AccessorType.VEC3.value, min=mins, max=maxs)]
 )
 
-resource = FileResource('vertices.bin', data=vertex_bytearray)
+resource = FileResource('test_vertices.bin', data=vertex_bytearray)
 gltf = GLTF(model=model, resources=[resource])
-gltf.export('triangle.gltf')
+gltf.export('test.gltf')
