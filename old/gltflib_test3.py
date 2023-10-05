@@ -38,4 +38,4 @@ model = GLTFModel(
 
 resource = FileResource('vertices.bin', data=vertex_bytearray)
 gltf = GLTF(model=model, resources=[resource])
-gltf.export('triangle.glb')
+gltf.export('test3.glb')

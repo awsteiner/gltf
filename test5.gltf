@@ -53,8 +53,50 @@
   ],
   "buffers": [
     {
-      "uri": "triangle.bin",
+      "uri": "test5.bin",
       "byteLength": 132
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0,
+          1,
+          0,
+          1
+        ],
+        "metallicFactor": 1.0,
+        "roughnessFactor": 1.0
+      },
+      "emissiveFactor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alphaMode": "MASK",
+      "alphaCutoff": 0.5,
+      "doubleSided": false
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          0,
+          0,
+          1
+        ],
+        "metallicFactor": 1.0,
+        "roughnessFactor": 1.0
+      },
+      "emissiveFactor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alphaMode": "MASK",
+      "alphaCutoff": 0.5,
+      "doubleSided": false
     }
   ],
   "meshes": [
@@ -65,7 +107,8 @@
             "POSITION": 1
           },
           "indices": 0,
-          "mode": 4
+          "mode": 4,
+          "material": 0
         }
       ]
     }

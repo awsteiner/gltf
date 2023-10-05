@@ -1,5 +1,6 @@
 import numpy as np
 import pygltflib
+from pygltflib.utils import ImageFormat, Image
 
 points = np.array(
     [
@@ -37,27 +38,14 @@ points_binary_blob = points.tobytes()
 
 gltf = pygltflib.GLTF2(
     scene=0,
+#    textures=[pygltflib.Texture()],
     scenes=[pygltflib.Scene(nodes=[0])],
     nodes=[pygltflib.Node(mesh=0)],
-    materials=[
-        pygltflib.Material(
-            alphaMode=pygltflib.MASK,
-            pbrMetallicRoughness=
-            pygltflib.PbrMetallicRoughness(baseColorFactor=[0,1,0,1])
-        ),
-        pygltflib.Material(
-            alphaMode=pygltflib.MASK,
-            pbrMetallicRoughness=
-            pygltflib.PbrMetallicRoughness(baseColorFactor=[1,0,0,1])
-        )
-    ],
     meshes=[
         pygltflib.Mesh(
             primitives=[
                 pygltflib.Primitive(
-                    material=0,
-                    indices=0,
-                    attributes=pygltflib.Attributes(POSITION=1)
+                    attributes=pygltflib.Attributes(POSITION=1), indices=0
                 )
             ]
         )
@@ -101,6 +89,11 @@ gltf = pygltflib.GLTF2(
 )
 gltf.set_binary_blob(triangles_binary_blob + points_binary_blob)
 
+#image=Image()
+#image.uri="texture.png"
+#gltf.images.append(image)
+#gltf.convert_images(ImageFormat.DATAURI)
+
 # save to file
-gltf.save("triangle.gltf")
-gltf.save("triangle.glb")
+gltf.save("test4.gltf")
+gltf.save("test4.glb")
