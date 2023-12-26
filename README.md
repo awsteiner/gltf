@@ -1,6 +1,25 @@
 gltf sandbox
 ============
 
+Python packages
+---------------
+
+* pyglftlib:
+
+  - Last commit on 9/6/23
+  - https://gitlab.com/dodgyville/pygltflib
+  - Appears to be more complete?
+
+* gltflib:
+
+  - Forked from pygltflib
+  - https://github.com/lukas-shawford/gltflib
+  - Last commit on 8/22/22.
+  - It seems to be better at creating glb files with binary data
+
+Python test
+-----------
+
 (Built on python packages gltflib and pygltflib. I use the viewer at
 https://gltf-viewer.donmccurdy.com/ to verify the gltf/glb files.)
 
