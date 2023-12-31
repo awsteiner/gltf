@@ -6,3 +6,6 @@ bl2:
 
 bl3:
 	/Applications/Blender.app/Contents/MacOS/Blender -b -P bl3.py 
+
+bl4:
+	/Applications/Blender.app/Contents/MacOS/Blender -b -P bl4.py 
