@@ -24,19 +24,31 @@ camera.rotation_mode='XYZ'
 scene.camera=camera
 
 # Create lights
-light_dist=10
+light_dist=6
 
 light_data=bpy.data.lights.new(name='light', type='POINT')
-light_data.energy=400
+light_data.energy=1000
 light=bpy.data.objects.new(name='light',object_data=light_data)
 bpy.context.collection.objects.link(light)
-light.location=(-light_dist,-light_dist,-light_dist)
+light.location=(light_dist,light_dist,light_dist)
 
 light_data=bpy.data.lights.new(name='light2', type='POINT')
-light_data.energy=400
+light_data.energy=1000
 light=bpy.data.objects.new(name='light2',object_data=light_data)
 bpy.context.collection.objects.link(light)
-light.location=(light_dist,light_dist,light_dist)
+light.location=(light_dist,-light_dist,light_dist)
+
+light_data=bpy.data.lights.new(name='light3', type='POINT')
+light_data.energy=1000
+light=bpy.data.objects.new(name='light3',object_data=light_data)
+bpy.context.collection.objects.link(light)
+light.location=(-light_dist,light_dist,light_dist)
+
+light_data=bpy.data.lights.new(name='light4', type='POINT')
+light_data.energy=1000
+light=bpy.data.objects.new(name='light4',object_data=light_data)
+bpy.context.collection.objects.link(light)
+light.location=(-light_dist,-light_dist,light_dist)
 
 # Import GLTF file
 bpy.ops.import_scene.gltf(filepath='/Users/awsteiner2/wcs/int9/bayes/test.gltf')
@@ -61,7 +73,7 @@ for i in range(0,20):
     print([numpy.pi/2.0,0,ang+numpy.pi/2.0])
     
     # Assemble the path
-    scene.render.filepath=os.path.join(output_path,('cam_{%2d}.png' % i))
+    scene.render.filepath=os.path.join(output_path,('cam_%02d.png' % i))
     
     # Call the render operator
     bpy.ops.render.render(write_still=True)
